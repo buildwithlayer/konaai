@@ -1,12 +1,15 @@
 {
   "name": "kona-demo",
   "version": "0.0.0",
+  "homepage": "https://github.com/buildwithlayer/konaai",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href /konaai/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist/browser"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +24,7 @@
     "@buildwithlayer/builder": "^0.0.7",
     "@buildwithlayer/chat": "^0.0.7",
     "@buildwithlayer/core": "^0.0.7",
+    "dotenv": "^16.3.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
@@ -30,6 +34,7 @@
     "@angular/cli": "^17.0.3",
     "@angular/compiler-cli": "^17.0.0",
     "@types/jasmine": "~5.1.0",
+    "gh-pages": "^6.1.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
