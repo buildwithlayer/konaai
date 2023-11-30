@@ -13,6 +13,8 @@ layerBuilder.mount();
 layerChat.mount();
 layerCore.mount({
   copilot: 'RAG',
+  systemMessage:
+    'Please be precise in your answers. If your answer requires bullet points, please also be short and to the point.',
   layerApiKey: '30d7d422-b61e-4dbf-b2a4-1a8e7903408e',
 
   // Do not include this in production code
