@@ -15,10 +15,10 @@ layerCore.mount({
   copilot: 'RAG',
   systemMessage:
     'Please be precise in your answers. If your answer requires bullet points, please also be short and to the point.',
-  layerApiKey: '30d7d422-b61e-4dbf-b2a4-1a8e7903408e',
+  layerApiKey: '1751882d-8b24-4b2f-9171-59185ff99f19',
 
   // Do not include this in production code
-  layerCustomerApiKey: '93d207b7-9754-403b-8829-376f2ff758c5',
+  layerCustomerApiKey: 'a449df88-2603-4c48-9731-1e6912dc7643',
 });
 @Component({
   selector: 'app-root',
