@@ -6,4 +6,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.json {
+  position: absolute;
+  top: 150px;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { initLayerBuilder } from '@buildwithlayer/builder';
@@ -29,4 +29,20 @@ layerCore.mount({
 })
 export class AppComponent {
   title = 'kona-demo';
+  filters = {};
+
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  ngOnInit() {
+    layerCore.actions.registerCallback('setFilter', (args) => {
+      console.log('SETTING FILTER', args);
+      this.filters = Object.assign({}, args);
+      this.cdr.detectChanges();
+      return 'success';
+    });
+  }
+
+  ngOnDestroy() {
+    layerCore.actions.unregisterCallback('setFilter');
+  }
 }
